@@ -28,7 +28,7 @@ This a basic CRUD NodeJS based application which use GraphQL for api layering an
    ```
 3. Create Schema in MySQLfor Linux/Unix/MacOS
    ```sh
-   mysql -u root < ./sql/exapp.sql
+   mysql -u root < ./sql/testdb.sql
 
 4. Run the server
    ```sh

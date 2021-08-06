@@ -1,4 +1,5 @@
 const graphql = require('./graphql')
+const start = require('./start')
 const express = require('express')
 
 module.exports = class Routes {
@@ -13,6 +14,7 @@ module.exports = class Routes {
 
         //Registers the base GraphQLi base endpoint
         app.use('/graphql', graphql)
+        app.use('/', start)
     }
 
 }

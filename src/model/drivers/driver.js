@@ -15,7 +15,7 @@ class Driver extends DAO {
         // Returns early with all drivers if no criteria was passed
         if (Object.keys(fields).length === 0) return this.findAll()
         
-        // Find matching bacons
+        // Find matching orders
         return this.findByFields({
             fields
         })

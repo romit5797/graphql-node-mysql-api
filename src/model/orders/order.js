@@ -11,28 +11,28 @@ class Order extends DAO {
     }
 
     /**
-     * Returns a bacon by its ID
+     * Returns a order by its ID
      */
     static async getByID(_, {id}) {
         return await this.find(id)
     }
 
     /**
-     * Returns a list of bacons matching the passed fields
+     * Returns a list of orders matching the passed fields
      * @param {*} fields - Fields to be matched
      */
     static async findMatching(_, fields) {
-        // Returns early with all bacons if no criteria was passed
+        // Returns early with all orders if no criteria was passed
         if (Object.keys(fields).length === 0) return this.findAll()
         
-        // Find matching bacons
+        // Find matching orders
         return this.findByFields({
             fields
         })
     }
 
     /**
-     * Creates a new bacon
+     * Creates a new order
      */
     static async createEntry(_, {type, price}) {
         const connection = await mySQLWrapper.getConnectionFromPool()
@@ -53,7 +53,7 @@ class Order extends DAO {
     }
 
     /**
-     * Updates a bacon 
+     * Updates a order 
      */
     static async updateEntry(_, {id, type, price}) {
         const connection = await mySQLWrapper.getConnectionFromPool()
